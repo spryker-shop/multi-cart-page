@@ -11,8 +11,5 @@ use Generated\Shared\Transfer\QuoteResponseTransfer;
 
 interface MultiCartPageToCartClientInterface
 {
-    /**
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function validateQuote(): QuoteResponseTransfer;
 }

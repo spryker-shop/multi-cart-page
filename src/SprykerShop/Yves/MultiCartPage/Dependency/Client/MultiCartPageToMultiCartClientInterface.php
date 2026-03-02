@@ -12,16 +12,8 @@ use Generated\Shared\Transfer\QuoteTransfer;
 
 interface MultiCartPageToMultiCartClientInterface
 {
-    /**
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function getDefaultCart(): QuoteTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function markQuoteAsDefault(QuoteTransfer $quoteTransfer): QuoteResponseTransfer;
 
     /**
@@ -29,50 +21,17 @@ interface MultiCartPageToMultiCartClientInterface
      */
     public function getQuoteCollection();
 
-    /**
-     * @param int $idQuote
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer|null
-     */
     public function findQuoteById(int $idQuote): ?QuoteTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function createQuote(QuoteTransfer $quoteTransfer): QuoteResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function updateQuote(QuoteTransfer $quoteTransfer): QuoteResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function deleteQuote(QuoteTransfer $quoteTransfer): QuoteResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function duplicateQuote(QuoteTransfer $quoteTransfer): QuoteResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function clearQuote(QuoteTransfer $quoteTransfer): QuoteResponseTransfer;
 
-    /**
-     * @return bool
-     */
     public function isQuoteDeletable(): bool;
 }

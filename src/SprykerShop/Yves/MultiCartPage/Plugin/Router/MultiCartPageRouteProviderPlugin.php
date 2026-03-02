@@ -138,11 +138,6 @@ class MultiCartPageRouteProviderPlugin extends AbstractRouteProviderPlugin
         return $routeCollection;
     }
 
-    /**
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
     protected function addMultiCartCreateRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildRoute('/multi-cart/create', 'MultiCartPage', 'MultiCart', 'createAction');
@@ -151,11 +146,6 @@ class MultiCartPageRouteProviderPlugin extends AbstractRouteProviderPlugin
         return $routeCollection;
     }
 
-    /**
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
     protected function addMultiCartUpdateRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildRoute('/multi-cart/update/{idQuote}', 'MultiCartPage', 'MultiCart', 'updateAction');
@@ -165,11 +155,6 @@ class MultiCartPageRouteProviderPlugin extends AbstractRouteProviderPlugin
         return $routeCollection;
     }
 
-    /**
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
     protected function addMultiCartDeleteRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildPostRoute('/multi-cart/delete/{idQuote}', 'MultiCartPage', 'MultiCart', 'deleteAction');
@@ -180,11 +165,6 @@ class MultiCartPageRouteProviderPlugin extends AbstractRouteProviderPlugin
         return $routeCollection;
     }
 
-    /**
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
     protected function addMultiCartConfirmDeleteRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildRoute('/multi-cart/confirm-delete/{idQuote}', 'MultiCartPage', 'MultiCart', 'confirmDeleteAction');
@@ -194,11 +174,6 @@ class MultiCartPageRouteProviderPlugin extends AbstractRouteProviderPlugin
         return $routeCollection;
     }
 
-    /**
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
     protected function addMultiCartClearRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildRoute('/multi-cart/clear/{idQuote}', 'MultiCartPage', 'MultiCart', 'clearAction');
@@ -209,11 +184,6 @@ class MultiCartPageRouteProviderPlugin extends AbstractRouteProviderPlugin
         return $routeCollection;
     }
 
-    /**
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
     protected function addMultiCartDuplicateRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildRoute('/multi-cart/duplicate/{idQuote}', 'MultiCartPage', 'MultiCart', 'duplicateAction');
@@ -224,11 +194,6 @@ class MultiCartPageRouteProviderPlugin extends AbstractRouteProviderPlugin
         return $routeCollection;
     }
 
-    /**
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
     protected function addMultiCartSetDefaultRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildRoute('/multi-cart/set-default/{idQuote}', 'MultiCartPage', 'MultiCart', 'setDefaultAction');
@@ -239,11 +204,6 @@ class MultiCartPageRouteProviderPlugin extends AbstractRouteProviderPlugin
         return $routeCollection;
     }
 
-    /**
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
     protected function addMultiCartIndexRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildRoute('/multi-cart', 'MultiCartPage', 'MultiCart', 'indexAction');

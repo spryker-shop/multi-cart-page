@@ -330,11 +330,6 @@ class MultiCartController extends AbstractController
         return $this->view($viewData, [], '@MultiCartPage/views/cart-delete/cart-delete.twig');
     }
 
-    /**
-     * @param int $idQuote
-     *
-     * @return array
-     */
     protected function executeConfirmDeleteAction(int $idQuote): array
     {
         $quoteTransfer = $this->findQuoteOrFail($idQuote);
@@ -366,22 +361,12 @@ class MultiCartController extends AbstractController
         return $quoteTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     protected function canWriteQuote(QuoteTransfer $quoteTransfer): bool
     {
         return $quoteTransfer->getCustomerReference() === $quoteTransfer->getCustomer()->getCustomerReference()
             || $this->can('WriteSharedCartPermissionPlugin', $quoteTransfer->getIdQuote());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     protected function isQuoteEditable(QuoteTransfer $quoteTransfer): bool
     {
         return $this->getFactory()

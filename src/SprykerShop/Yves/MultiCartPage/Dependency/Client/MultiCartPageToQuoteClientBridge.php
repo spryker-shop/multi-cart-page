@@ -24,11 +24,6 @@ class MultiCartPageToQuoteClientBridge implements MultiCartPageToQuoteClientInte
         $this->quoteClient = $quoteClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     public function isQuoteEditable(QuoteTransfer $quoteTransfer): bool
     {
         return $this->quoteClient->isQuoteEditable($quoteTransfer);

@@ -24,9 +24,6 @@ class MultiCartPageToCartClientBridge implements MultiCartPageToCartClientInterf
         $this->cartClient = $cartClient;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function validateQuote(): QuoteResponseTransfer
     {
         return $this->cartClient->validateQuote();

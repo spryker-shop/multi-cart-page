@@ -17,19 +17,11 @@ class QuoteFormDataProvider implements QuoteFormDataProviderInterface
      */
     protected $multiCartClient;
 
-    /**
-     * @param \SprykerShop\Yves\MultiCartPage\Dependency\Client\MultiCartPageToMultiCartClientInterface $multiCartClient
-     */
     public function __construct(MultiCartPageToMultiCartClientInterface $multiCartClient)
     {
         $this->multiCartClient = $multiCartClient;
     }
 
-    /**
-     * @param int|null $idQuote
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer|null
-     */
     public function getData(?int $idQuote = null): ?QuoteTransfer
     {
         if ($idQuote) {

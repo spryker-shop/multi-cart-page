@@ -99,11 +99,6 @@ class MultiCartAsyncController extends AbstractController
         return $this->redirectResponseInternal(static::ROUTE_NAME_CART_ASYNC_VIEW);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     protected function isQuoteEditable(QuoteTransfer $quoteTransfer): bool
     {
         return $this->getFactory()

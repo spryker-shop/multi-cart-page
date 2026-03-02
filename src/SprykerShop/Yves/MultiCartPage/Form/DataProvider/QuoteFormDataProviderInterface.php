@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\QuoteTransfer;
 
 interface QuoteFormDataProviderInterface
 {
-    /**
-     * @param int|null $idQuote
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer|null
-     */
     public function getData(?int $idQuote = null): ?QuoteTransfer;
 }

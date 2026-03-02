@@ -26,11 +26,6 @@ use Symfony\Component\Form\FormInterface;
 
 class MultiCartPageFactory extends AbstractFactory
 {
-    /**
-     * @param int|null $idQuote
-     *
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function getQuoteForm(?int $idQuote = null): FormInterface
     {
         return $this->getFormFactory()->create(
@@ -39,9 +34,6 @@ class MultiCartPageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\MultiCartPage\Form\DataProvider\QuoteFormDataProviderInterface
-     */
     public function createQuoteFormDataProvider(): QuoteFormDataProviderInterface
     {
         return new QuoteFormDataProvider(
@@ -49,49 +41,31 @@ class MultiCartPageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\MultiCartPage\Dependency\Client\MultiCartPageToMultiCartClientInterface
-     */
     public function getMultiCartClient(): MultiCartPageToMultiCartClientInterface
     {
         return $this->getProvidedDependency(MultiCartPageDependencyProvider::CLIENT_MULTI_CART);
     }
 
-    /**
-     * @return \SprykerShop\Yves\MultiCartPage\Dependency\Client\MultiCartPageToCartClientInterface
-     */
     public function getCartClient(): MultiCartPageToCartClientInterface
     {
         return $this->getProvidedDependency(MultiCartPageDependencyProvider::CLIENT_CART);
     }
 
-    /**
-     * @return \SprykerShop\Yves\MultiCartPage\Dependency\Client\MultiCartPageToQuoteClientInterface
-     */
     public function getQuoteClient(): MultiCartPageToQuoteClientInterface
     {
         return $this->getProvidedDependency(MultiCartPageDependencyProvider::CLIENT_QUOTE);
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormFactoryInterface
-     */
     public function getFormFactory(): FormFactoryInterface
     {
         return $this->getProvidedDependency(ApplicationConstants::FORM_FACTORY);
     }
 
-    /**
-     * @return \SprykerShop\Yves\MultiCartPage\Form\Cloner\FormCloner
-     */
     public function getFormCloner(): FormCloner
     {
         return new FormCloner();
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function getMultiCartDuplicateForm(): FormInterface
     {
         return $this->getFormFactory()->create(MultiCartDuplicateForm::class);
@@ -108,17 +82,11 @@ class MultiCartPageFactory extends AbstractFactory
         return $this->getFormFactory()->create(MultiCartDeleteForm::class, $data, $options);
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function getMultiCartClearForm(): FormInterface
     {
         return $this->getFormFactory()->create(MultiCartClearForm::class);
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function getMultiCartSetDefaultForm(): FormInterface
     {
         return $this->getFormFactory()->create(MultiCartSetDefaultForm::class);
